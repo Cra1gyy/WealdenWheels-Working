@@ -21,19 +21,12 @@
           <p>Community transport is about freedom and fairness of opportunity. It meets the needs of people who do not have access to cars, taxis or buses — providing a lifeline in both rural and urban areas. It takes disabled people to work, children to school, sick people to healthcare and older people to the shops.</p>
         </div>
         <div class="about-intro-visual">
-          <div class="what-is-card">
-            <div class="what-is-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="var(--green-700)"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          <div class="about-photo-wrap">
+            <img :src="busTripImg" alt="Wealden Wheels fleet at Pevington Farm" class="about-photo" />
+            <div class="about-photo-caption">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--green-400)"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+              Based at Pevington Farm, Pluckley, Kent
             </div>
-            <h3>People Helping People</h3>
-            <p>At its heart, community transport is all about people, improving well-being, health and happiness. Our volunteer drivers give their time freely to help their neighbours.</p>
-          </div>
-          <div class="what-is-card">
-            <div class="what-is-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="var(--green-700)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-            </div>
-            <h3>Safe &amp; Accountable</h3>
-            <p>All our vehicles are regularly serviced and safety checked. Our volunteer drivers undergo DBS checks and complete MIDAS (minibus driver awareness scheme) training.</p>
           </div>
         </div>
       </div>
@@ -122,6 +115,9 @@
 </template>
 
 <script setup>
+import fleetImg from '@/images/fleet-2018.jpg'
+import busTripImg from '@/images/bus-on-trip.jpg'
+
 const supporters = [
   'Kent County Council',
   'Ashford Borough Council',
@@ -222,34 +218,33 @@ const values = [
   margin-bottom: 16px;
 }
 
-.what-is-card {
-  background: var(--green-50);
+.about-photo-wrap {
+  position: relative;
   border-radius: var(--radius-lg);
-  padding: 28px;
-  margin-bottom: 16px;
-  border: 1px solid var(--green-100);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
 }
 
-.what-is-icon {
-  width: 60px;
-  height: 60px;
-  background: var(--green-100);
-  border-radius: var(--radius-md);
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.about-photo-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(7,36,20,0.85) 0%, transparent 100%);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.82rem;
+  font-weight: 500;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-
-.what-is-card h3 {
-  font-size: 1rem;
-  margin-bottom: 8px;
-}
-
-.what-is-card p {
-  font-size: 0.87rem;
-  color: var(--gray-500);
-  line-height: 1.65;
+  gap: 6px;
 }
 
 /* WW Section */

@@ -7,7 +7,7 @@
           <!-- Brand Column -->
           <div class="footer-brand">
             <div class="footer-logo">
-              <svg width="32" height="32" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- <svg width="32" height="32" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="19" cy="19" r="17" stroke="currentColor" stroke-width="2.2"/>
                 <circle cx="19" cy="19" r="5.5" stroke="currentColor" stroke-width="2.2"/>
                 <line x1="19" y1="2" x2="19" y2="13.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
@@ -18,7 +18,7 @@
                 <line x1="24.4" y1="24.4" x2="32.3" y2="32.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
                 <line x1="32.3" y1="5.7" x2="24.4" y2="13.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
                 <line x1="13.6" y1="24.4" x2="5.7" y2="32.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              </svg>
+              </svg> -->
               <span>Wealden Wheels</span>
             </div>
             <p class="footer-desc">

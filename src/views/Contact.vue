@@ -164,6 +164,7 @@ const supporters = [
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin-bottom: 48px;
+  overflow: hidden;
 }
 
 .contact-card {
@@ -442,8 +443,18 @@ address {
   .contact-info-grid {
     grid-template-columns: 1fr;
   }
+  .contact-card {
+    padding: 20px 18px;
+    gap: 14px;
+  }
+  .contact-card-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+  }
   .contact-card-value {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+    word-break: break-all;
   }
 }
 </style>

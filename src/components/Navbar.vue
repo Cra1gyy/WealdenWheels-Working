@@ -6,7 +6,7 @@
         <!-- Logo -->
         <RouterLink to="/" class="logo" @click="closeMenu">
           <div class="logo-icon">
-            <svg width="36" height="36" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- <svg width="36" height="36" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="19" cy="19" r="17" stroke="currentColor" stroke-width="2.2"/>
               <circle cx="19" cy="19" r="5.5" stroke="currentColor" stroke-width="2.2"/>
               <line x1="19" y1="2" x2="19" y2="13.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
@@ -17,7 +17,7 @@
               <line x1="24.4" y1="24.4" x2="32.3" y2="32.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
               <line x1="32.3" y1="5.7" x2="24.4" y2="13.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
               <line x1="13.6" y1="24.4" x2="5.7" y2="32.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-            </svg>
+            </svg> -->
           </div>
           <div class="logo-text">
             <span class="logo-name">Wealden Wheels</span>
@@ -316,7 +316,6 @@ onUnmounted(() => {
   display: none;
   background: var(--white);
   border-top: 1px solid var(--gray-100);
-  padding: 16px 24px 24px;
   box-shadow: var(--shadow-lg);
   max-height: 0;
   overflow: hidden;
@@ -325,6 +324,7 @@ onUnmounted(() => {
 
 .mobile-menu.open {
   max-height: 600px;
+  padding: 16px 24px 24px;
 }
 
 .mobile-nav-links {

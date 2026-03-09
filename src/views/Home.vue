@@ -1,8 +1,8 @@
 <template>
   <!-- ─── Hero ─── -->
   <section class="hero">
-    <div class="hero-overlay"></div>
     <div class="hero-banner-bg"></div>
+    <div class="hero-overlay"></div>
     <div class="container hero-content">
       <div class="hero-text">
         <span class="hero-tag">Pluckley &amp; Surrounding Villages, Kent</span>
@@ -96,14 +96,80 @@
     </div>
   </section>
 
+  <!-- ─── Photo Gallery ─── -->
+  <section class="section section--light gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Our Community</span>
+        <h2>Out &amp; About with Wealden Wheels</h2>
+        <p>From day trips to hospital runs, school outings to shopping trips — we help our community get where they need to go.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item--large" @click="openLightbox(0)">
+          <img :src="busPeopleImg" alt="Wealden Wheels vehicles at base" />
+          <div class="gallery-caption">Our Full Fleet at Pevington Farm</div>
+          <div class="gallery-zoom-hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg></div>
+        </div>
+        <div class="gallery-item" @click="openLightbox(1)">
+          <img :src="wheelchairInBusImg" alt="Accessible minibus" />
+          <div class="gallery-caption">Wheelchair Accessible Vehicles</div>
+          <div class="gallery-zoom-hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg></div>
+        </div>
+        <div class="gallery-item" @click="openLightbox(2)">
+          <img :src="team" alt="Accessible minibus" />
+          <div class="gallery-caption">Wheelchair Accessible Vehicles</div>
+          <div class="gallery-zoom-hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg></div>
+        </div>
+        <div class="gallery-item" @click="openLightbox(3)">
+          <img :src="electricBusImg" alt="Community trip" />
+          <div class="gallery-caption">Community Day Trips</div>
+          <div class="gallery-zoom-hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg></div>
+        </div>
+        <div class="gallery-item" @click="openLightbox(4)">
+          <img :src="liftUser" alt="Village transport" />
+          <div class="gallery-caption">Serving Local Villages</div>
+          <div class="gallery-zoom-hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg></div>
+        </div>
+        <div class="gallery-item gallery-item--large" @click="openLightbox(5)">
+          <img :src="busTripImg" alt="Village transport" />
+          <div class="gallery-caption">Serving Local Villages</div>
+          <div class="gallery-zoom-hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg></div>
+        </div>
+        <div class="gallery-item" @click="openLightbox(6)">
+          <img :src="marvinBackImg" alt="Wealden Wheels team" />
+          <div class="gallery-caption">Volunteer Drivers &amp; Our Team</div>
+          <div class="gallery-zoom-hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg></div>
+        </div>
+        <div class="gallery-item" @click="openLightbox(7)">
+          <img :src="megFrontImg" alt="Wealden Wheels team" />
+          <div class="gallery-caption">Volunteer Drivers &amp; Our Team</div>
+          <div class="gallery-zoom-hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg></div>
+        </div>
+        <div class="gallery-item gallery-item--large" @click="openLightbox(8)">
+          <img :src="wheelchairLiftImg" alt="Wealden Wheels team" />
+          <div class="gallery-caption">Volunteer Drivers &amp; Our Team</div>
+          <div class="gallery-zoom-hint"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg></div>
+        </div>
+      </div>
+      <div class="gallery-cta">
+        <RouterLink to="/fleet" class="btn btn-outline-green">View Our Fleet</RouterLink>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── Wheelchair Accessibility ─── -->
-  <section class="section section--light">
+  <section class="section">
     <div class="container">
       <div class="access-grid">
         <div class="access-visual">
-          <div class="access-badge-large">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="var(--green-700)"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01H13c-.35-.2-.75-.3-1.19-.26C10.76 7.11 10 8.04 10 9.09V15c0 1.1.9 2 2 2h5v5h2v-5.5c0-1.1-.9-2-2-2h-3v-3.45c1.29 1.15 3.18 1.94 5 1.95zm-9 7c-1.1 0-2-.9-2-2v-5H6l2.07 6.97C8.38 21.12 8.94 22 10 22s2-.9 2-2h-2z"/></svg>
-            <span>Wheelchair<br>Accessible</span>
+          <div class="access-photo-wrap">
+            <img :src="wheelchairLiftImg" alt="Wealden Wheels accessible vehicles" class="access-photo" />
+            <div class="access-photo-overlay">
+              <div class="access-overlay-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45h-.01c-.35-.2-.75-.3-1.19-.26C10.76 7.11 10 8.04 10 9.09V15c0 1.1.9 2 2 2h5v5h2v-5.5c0-1.1-.9-2-2-2h-3v-3.45c1.29 1.15 3.18 1.94 5 1.95z"/></svg>
+                <span>3 Accessible<br>Vehicles</span>
+              </div>
+            </div>
           </div>
           <div class="access-stat-row">
             <div class="access-stat">
@@ -174,6 +240,39 @@
     </div>
   </section>
 
+  <!-- ─── Lightbox ─── -->
+  <Teleport to="body">
+    <div v-if="lightboxOpen" class="lightbox-overlay" @click.self="closeLightbox" @keydown="handleKey">
+      <button class="lightbox-close" @click="closeLightbox" aria-label="Close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <button class="lightbox-nav lightbox-nav--prev" @click="prevImage" aria-label="Previous image">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="lightbox-content">
+        <img :src="galleryImages[lightboxIndex].src" :alt="galleryImages[lightboxIndex].alt" class="lightbox-img" />
+        <div class="lightbox-caption">
+          <span class="lightbox-caption-text">{{ galleryImages[lightboxIndex].caption }}</span>
+          <span class="lightbox-counter">{{ lightboxIndex + 1 }} / {{ galleryImages.length }}</span>
+        </div>
+      </div>
+      <button class="lightbox-nav lightbox-nav--next" @click="nextImage" aria-label="Next image">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="lightbox-thumbnails">
+        <button
+          v-for="(img, i) in galleryImages"
+          :key="i"
+          class="lightbox-thumb"
+          :class="{ 'lightbox-thumb--active': i === lightboxIndex }"
+          @click="lightboxIndex = i"
+        >
+          <img :src="img.src" :alt="img.alt" />
+        </button>
+      </div>
+    </div>
+  </Teleport>
+
   <!-- ─── CTA Banner ─── -->
   <section class="cta-banner">
     <div class="container">
@@ -197,6 +296,61 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+import fleetImg from '@/images/fleet-2018.jpg'
+import busTripImg from '@/images/bus-on-trip.jpg'
+import busPeopleImg from '@/images/bus-people.jpg'
+import electricBusImg from '@/images/electric-bus.jpg'
+import marvinBackImg from '@/images/marvin-back.jpg'
+import megFrontImg from '@/images/meg-front.jpg'
+import wheelchairLiftImg from '@/images/wheelchair-lift.jpg'
+import wheelchairInBusImg from '@/images/wheelchair-inBus.jpg'
+import team from '@/images/team.jpg'
+import liftUser from '@/images/lift-used.jpg'
+
+const lightboxOpen = ref(false)
+const lightboxIndex = ref(0)
+
+const galleryImages = [
+  { src: busPeopleImg, alt: 'Wealden Wheels vehicles at base', caption: 'Our Full Fleet at Pevington Farm' },
+  { src: wheelchairInBusImg, alt: 'Accessible minibus', caption: 'Wheelchair Accessible Vehicles' },
+  { src: team, alt: 'Wealden Wheels team', caption: 'Our Team' },
+  { src: electricBusImg, alt: 'Community trip', caption: 'Community Day Trips' },
+  { src: liftUser, alt: 'Village transport', caption: 'Serving Local Villages' },
+  { src: busTripImg, alt: 'Bus on trip', caption: 'Serving Local Villages' },
+  { src: marvinBackImg, alt: 'Wealden Wheels team', caption: 'Volunteer Drivers & Our Team' },
+  { src: megFrontImg, alt: 'Wealden Wheels team', caption: 'Volunteer Drivers & Our Team' },
+  { src: wheelchairLiftImg, alt: 'Wheelchair lift', caption: 'Volunteer Drivers & Our Team' },
+]
+
+function openLightbox(index) {
+  lightboxIndex.value = index
+  lightboxOpen.value = true
+  document.body.style.overflow = 'hidden'
+}
+
+function closeLightbox() {
+  lightboxOpen.value = false
+  document.body.style.overflow = ''
+}
+
+function prevImage() {
+  lightboxIndex.value = (lightboxIndex.value - 1 + galleryImages.length) % galleryImages.length
+}
+
+function nextImage() {
+  lightboxIndex.value = (lightboxIndex.value + 1) % galleryImages.length
+}
+
+function handleKey(e) {
+  if (e.key === 'ArrowLeft') prevImage()
+  else if (e.key === 'ArrowRight') nextImage()
+  else if (e.key === 'Escape') closeLightbox()
+}
+
+onMounted(() => window.addEventListener('keydown', handleKey))
+onUnmounted(() => window.removeEventListener('keydown', handleKey))
+
 const stats = [
   { value: '4',    label: 'Vehicles Available' },
   { value: '3',    label: 'Wheelchair Accessible' },
@@ -250,7 +404,7 @@ const memberTypes = [
   min-height: 100vh;
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   overflow: hidden;
 }
 
@@ -263,7 +417,7 @@ const memberTypes = [
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(7, 36, 20, 0.92) 0%, rgba(26, 107, 58, 0.85) 60%, rgba(15, 76, 38, 0.88) 100%);
+  background: linear-gradient(135deg, rgba(7,36,20,0.92) 0%, rgba(26,107,58,0.85) 60%, rgba(15,76,38,0.88) 100%);
   z-index: 1;
 }
 
@@ -294,7 +448,7 @@ const memberTypes = [
 
 .hero-text h1 {
   font-family: var(--font-heading);
-  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
   font-weight: 800;
   color: var(--white);
   line-height: 1.1;
@@ -302,9 +456,9 @@ const memberTypes = [
 }
 
 .hero-text p {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: rgba(255,255,255,0.82);
-  max-width: 560px;
+  max-width: 520px;
   margin-bottom: 40px;
   line-height: 1.7;
 }
@@ -333,9 +487,10 @@ const memberTypes = [
   border-radius: 100px;
 }
 
+
 .hero-scroll {
   position: absolute;
-  bottom: 36px;
+  bottom: 120px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
@@ -491,6 +646,62 @@ const memberTypes = [
   color: rgba(255,255,255,0.85);
 }
 
+/* ─── Photo Gallery ─── */
+.gallery-section {}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 260px 220px;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item--large {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.gallery-item--wide {
+  grid-column: span 2;
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 18px 14px;
+  background: linear-gradient(to top, rgba(7,36,20,0.85) 0%, transparent 100%);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.gallery-cta {
+  text-align: center;
+}
+
 /* ─── Accessibility ─── */
 .access-grid {
   display: grid;
@@ -499,23 +710,42 @@ const memberTypes = [
   align-items: center;
 }
 
-.access-badge-large {
-  background: var(--green-100);
+.access-photo-wrap {
+  position: relative;
   border-radius: var(--radius-lg);
-  padding: 48px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
   margin-bottom: 20px;
-  text-align: center;
 }
 
-.access-badge-large span {
-  font-family: var(--font-heading);
-  font-size: 1.3rem;
-  color: var(--green-800);
-  line-height: 1.2;
+.access-photo {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.access-photo-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(7,36,20,0.7) 0%, transparent 60%);
+}
+
+.access-overlay-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--green-700);
+  color: white;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 .access-stat-row {
@@ -530,6 +760,7 @@ const memberTypes = [
   background: var(--white);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
 }
 
 .access-stat strong {
@@ -707,6 +938,7 @@ const memberTypes = [
 @media (max-width: 1024px) {
   .members-grid { grid-template-columns: repeat(2, 1fr); }
   .villages-grid { grid-template-columns: repeat(3, 1fr); }
+  .gallery-grid { grid-template-rows: 220px 180px; }
 }
 
 @media (max-width: 768px) {
@@ -715,11 +947,186 @@ const memberTypes = [
   .access-grid { grid-template-columns: 1fr; gap: 40px; }
   .cta-inner { flex-direction: column; text-align: center; }
   .cta-actions { justify-content: center; flex-wrap: wrap; }
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    height: auto;
+  }
+  .gallery-item { height: 160px; }
+  .gallery-item--large { grid-column: span 2; height: 200px; }
+  .gallery-item--wide { grid-column: span 2; height: 160px; }
 }
 
 @media (max-width: 580px) {
   .members-grid { grid-template-columns: 1fr; }
   .villages-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-actions { flex-direction: column; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-item--large, .gallery-item--wide { grid-column: span 1; }
+}
+
+/* ─── Gallery zoom hint ─── */
+.gallery-zoom-hint {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background: rgba(7,36,20,0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.gallery-item:hover .gallery-zoom-hint {
+  opacity: 1;
+}
+
+/* ─── Lightbox ─── */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.93);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 1;
+}
+
+.lightbox-close:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 1;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.lightbox-nav--prev { left: 16px; }
+.lightbox-nav--next { right: 16px; }
+
+.lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: min(90vw, 1000px);
+  width: 100%;
+}
+
+.lightbox-img {
+  max-height: 70vh;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+}
+
+.lightbox-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 14px;
+  padding: 0 4px;
+}
+
+.lightbox-caption-text {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+}
+
+.lightbox-counter {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.45);
+  flex-shrink: 0;
+}
+
+.lightbox-thumbnails {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+  overflow-x: auto;
+  max-width: min(90vw, 1000px);
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.2) transparent;
+}
+
+.lightbox-thumb {
+  flex-shrink: 0;
+  width: 64px;
+  height: 48px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  opacity: 0.5;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+
+.lightbox-thumb:hover {
+  opacity: 0.8;
+}
+
+.lightbox-thumb--active {
+  border-color: var(--green-400);
+  opacity: 1;
+}
+
+.lightbox-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .lightbox-nav { width: 40px; height: 40px; }
+  .lightbox-nav--prev { left: 4px; }
+  .lightbox-nav--next { right: 4px; }
+  .lightbox-thumb { width: 48px; height: 36px; }
 }
 </style>
