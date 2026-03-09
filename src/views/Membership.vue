@@ -28,7 +28,6 @@
               <div class="rate-card-label">Local Parishes</div>
               <div class="rate-amount">£10 <span>per year</span></div>
               <div class="rate-detail">Charing, Chilham, Egerton, Pluckley or Smarden</div>
-              <div class="rate-renewal">£15 in subsequent years</div>
             </div>
             <div class="rate-card">
               <div class="rate-card-label">All Other Addresses</div>
