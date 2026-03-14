@@ -375,11 +375,17 @@ onUnmounted(() => {
   .mobile-menu {
     display: block;
   }
+  .logo-name {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width: 480px) {
   .logo-tagline {
     display: none;
+  }
+  .logo-name {
+    font-size: 1.4rem;
   }
 }
 </style>
