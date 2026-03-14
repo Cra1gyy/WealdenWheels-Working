@@ -6,18 +6,7 @@
         <!-- Logo -->
         <RouterLink to="/" class="logo" @click="closeMenu">
           <div class="logo-icon">
-            <!-- <svg width="36" height="36" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="19" cy="19" r="17" stroke="currentColor" stroke-width="2.2"/>
-              <circle cx="19" cy="19" r="5.5" stroke="currentColor" stroke-width="2.2"/>
-              <line x1="19" y1="2" x2="19" y2="13.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="19" y1="24.5" x2="19" y2="36" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="2" y1="19" x2="13.5" y2="19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="24.5" y1="19" x2="36" y2="19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="5.7" y1="5.7" x2="13.6" y2="13.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="24.4" y1="24.4" x2="32.3" y2="32.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="32.3" y1="5.7" x2="24.4" y2="13.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="13.6" y1="24.4" x2="5.7" y2="32.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-            </svg> -->
+            <!-- <img src="@/images/Gemini_Generated_Image_xcudqwxcudqwxcud.png" alt="Wealden Wheels Logo" width="140" height="40"> -->
           </div>
           <div class="logo-text">
             <span class="logo-name">Wealden Wheels</span>
@@ -118,7 +107,8 @@ onUnmounted(() => {
   z-index: 1000;
   height: var(--navbar-height);
   transition: background var(--transition), box-shadow var(--transition);
-  background: transparent;
+  background: var(--white);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
 }
 
 .navbar--scrolled,
@@ -144,7 +134,7 @@ onUnmounted(() => {
 }
 
 .logo-icon {
-  color: var(--white);
+  color: var(--green-700);
   transition: color var(--transition);
 }
 
@@ -162,8 +152,8 @@ onUnmounted(() => {
 .logo-name {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--white);
+  font-size: 2.1rem;
+  color: var(--green-800);
   transition: color var(--transition);
 }
 
@@ -172,8 +162,9 @@ onUnmounted(() => {
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
+  color: var(--gray-500);
   transition: color var(--transition);
+  padding: 0 10px;
 }
 
 .navbar--scrolled .logo-name,
@@ -200,7 +191,7 @@ onUnmounted(() => {
   border-radius: var(--radius-sm);
   font-size: 0.85rem;
   font-weight: 500;
-  color: rgba(255,255,255,0.88);
+  color: var(--gray-700);
   transition: all var(--transition);
   position: relative;
   white-space: nowrap;
@@ -213,7 +204,7 @@ onUnmounted(() => {
   left: 11px;
   right: 11px;
   height: 2px;
-  background: var(--white);
+  background: var(--green-700);
   border-radius: 2px;
   transform: scaleX(0);
   transition: transform var(--transition);
@@ -226,7 +217,7 @@ onUnmounted(() => {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--white);
+  color: var(--green-700);
 }
 
 .navbar--scrolled .nav-links a,
@@ -260,13 +251,13 @@ onUnmounted(() => {
   gap: 6px;
   font-size: 0.88rem;
   font-weight: 600;
-  color: rgba(255,255,255,0.9);
+  color: var(--green-700);
   transition: color var(--transition);
   white-space: nowrap;
 }
 
 .nav-phone:hover {
-  color: var(--white);
+  color: var(--green-800);
 }
 
 .navbar--scrolled .nav-phone,
@@ -296,7 +287,7 @@ onUnmounted(() => {
 .hamburger span {
   display: block;
   height: 2px;
-  background: var(--white);
+  background: var(--green-800);
   border-radius: 2px;
   transition: all var(--transition);
   transform-origin: center;

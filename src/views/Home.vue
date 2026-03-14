@@ -411,13 +411,13 @@ const memberTypes = [
 .hero-banner-bg {
   position: absolute;
   inset: 0;
-  background: url('@/images/wealden-wheels-banner.jpg') center/cover no-repeat;
+  background: url('@/images/fleet-2018.jpg') center/cover no-repeat;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(7,36,20,0.92) 0%, rgba(26,107,58,0.85) 60%, rgba(15,76,38,0.88) 100%);
+  /* background: linear-gradient(135deg, rgba(7,36,20,0.92) 0%, rgba(26,107,58,0.85) 60%, rgba(15,76,38,0.88) 100%); */
   z-index: 1;
 }
 
@@ -438,7 +438,7 @@ const memberTypes = [
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.8);
+  color: black;
   background: rgba(255,255,255,0.12);
   border: 1px solid rgba(255,255,255,0.2);
   padding: 6px 18px;
@@ -450,14 +450,14 @@ const memberTypes = [
   font-family: var(--font-heading);
   font-size: clamp(2rem, 4.5vw, 3.6rem);
   font-weight: 800;
-  color: var(--white);
+  color: var(--black);
   line-height: 1.1;
   margin-bottom: 24px;
 }
 
 .hero-text p {
   font-size: 1.1rem;
-  color: rgba(255,255,255,0.82);
+  color: var(--black);
   max-width: 520px;
   margin-bottom: 40px;
   line-height: 1.7;
@@ -480,7 +480,7 @@ const memberTypes = [
   align-items: center;
   gap: 8px;
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.7);
+  color: rgba(0,0,0,0.7);
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.15);
   padding: 8px 16px;
