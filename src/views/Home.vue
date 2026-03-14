@@ -304,7 +304,7 @@ import electricBusImg from '@/images/electric-bus.jpg'
 import marvinBackImg from '@/images/marvin-back.jpg'
 import megFrontImg from '@/images/meg-front.jpg'
 import wheelchairLiftImg from '@/images/wheelchair-lift.jpg'
-import wheelchairInBusImg from '@/images/wheelchair-inBus.jpg'
+import wheelchairInBusImg from '@/images/wheelchair-InBus.jpg'
 import team from '@/images/team.jpg'
 import liftUser from '@/images/lift-used.jpg'
 
