@@ -376,22 +376,22 @@ const villages = [
 
 const memberTypes = [
   {
-    title: 'Charities &amp; Voluntary Groups',
+    title: 'Charities & Voluntary Groups',
     desc: 'Local charities and not-for-profit groups can benefit from affordable community transport for their clients and activities.',
     icon: `<svg width="30" height="30" viewBox="0 0 24 24" fill="var(--green-700)"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`
   },
   {
-    title: 'Schools &amp; Colleges',
+    title: 'Schools & Colleges',
     desc: 'Educational trips, sports fixtures and residential visits — we provide safe and reliable transport for young people.',
     icon: `<svg width="30" height="30" viewBox="0 0 24 24" fill="var(--green-700)"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>`
   },
   {
-    title: 'Care Homes &amp; Health Groups',
+    title: 'Care Homes & Health Groups',
     desc: 'Our wheelchair accessible vehicles are particularly well-suited to care homes, day centres and health-related groups.',
     icon: `<svg width="30" height="30" viewBox="0 0 24 24" fill="var(--green-700)"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45h-.01c-.35-.2-.75-.3-1.19-.26C10.76 7.11 10 8.04 10 9.09V15c0 1.1.9 2 2 2h5v5h2v-5.5c0-1.1-.9-2-2-2h-3v-3.45c1.29 1.15 3.18 1.94 5 1.95z"/></svg>`
   },
   {
-    title: 'Families &amp; Individuals',
+    title: 'Families & Individuals',
     desc: 'Individual families can also become members and hire a vehicle for days out, appointments or group travel needs.',
     icon: `<svg width="30" height="30" viewBox="0 0 24 24" fill="var(--green-700)"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>`
   }
