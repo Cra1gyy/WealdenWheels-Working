@@ -6,7 +6,7 @@
         <!-- Logo -->
         <RouterLink to="/" class="logo" @click="closeMenu">
           <div class="logo-icon">
-            <!-- <img src="@/images/Gemini_Generated_Image_xcudqwxcudqwxcud.png" alt="Wealden Wheels Logo" width="140" height="40"> -->
+            <img src="@/images/new-logo.jpg" alt="Wealden Wheels Logo" width="140">
           </div>
           <div class="logo-text">
             <span class="logo-name">Wealden Wheels</span>
@@ -122,7 +122,7 @@ onUnmounted(() => {
   align-items: center;
   justify-content: space-between;
   height: var(--navbar-height);
-  gap: 20px;
+  gap: 20px
 }
 
 /* ─── Logo ─── */
